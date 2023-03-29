@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>projeto3-driveneats</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+      </header>
+      <main>
+        <div class="container">
+          <div class="block">
+            <h2 class="first">Primeiro, seu prato</h2>
+            <div class="cards">
+              <div id="frango-1" class="card plate border">
+                <img src="assets/frango_yin_yang.png" alt="" />
+                <h2>Frango Yin Yang</h2>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <h3>R$ 14,90</h3>
+              </div>
+
+              <div id="frango-2" class="card plate">
+                <img src="assets/frango_yin_yang.png" alt="" />
+                <h2>Frango Yin Yang</h2>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <h3>R$ 14,90</h3>
+              </div>
+
+              <div class="card plate">
+                <img src="assets/frango_yin_yang.png" alt="" />
+                <h2>Frango Yin Yang</h2>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <h3>R$ 14,90</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <h2>Agora, sua bebida</h2>
+            <div class="cards">
+              <div class="card drink">
+                <img src="assets/coca-cola.png" alt="" />
+                <h2>Coquinha gelada</h2>
+                <p>Lata 350ml</p>
+                <h3>R$ 4,90</h3>
+              </div>
+
+              <div class="card drink">
+                <img src="assets/coca-cola.png" alt="" />
+                <h2>Coquinha gelada</h2>
+                <p>Lata 350ml</p>
+                <h3>R$ 4,90</h3>
+              </div>
+
+              drink
+              <div class="card drink">
+                <img src="assets/coca-cola.png" alt="" />
+                <h2>Coquinha gelada</h2>
+                <p>Lata 350ml</p>
+                <h3>R$ 4,90</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <h2>Por fim, sua sobremesa</h2>
+            <div class="cards">
+              <div class="card dessert">
+                <img src="assets/pudim.png" alt="" />
+                <h2>Pudim</h2>
+                <p>Apenas pudim</p>
+                <h3>R$ 7,90</h3>
+              </div>
+
+              <div class="card dessert">
+                <img src="assets/pudim.png" alt="" />
+                <h2>Pudim</h2>
+                <p>Apenas pudim</p>
+                <h3>R$ 7,90</h3>
+              </div>
+
+              <div class="card dessert">
+                <img src="assets/pudim.png" alt="" />
+                <h2>Pudim</h2>
+                <p>Apenas pudim</p>
+                <h3>R$ 7,90</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <button onclick="concatenarPedidos()" class="active">
+          Selecione os 3 itens para fechar o pedido
+        </button>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

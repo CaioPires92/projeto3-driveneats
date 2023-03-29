@@ -1,0 +1,141 @@
+/* font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif; */
+
+.container {
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 414px;
+  background-color: #e5e5e5;
+}
+
+/* HEADER =========================== */
+
+header {
+  width: 414px;
+  position: fixed;
+  top: 0;
+  margin-inline: auto;
+  padding: 21px 46px;
+  background-color: #cf2b2b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 44px;
+  color: #fff;
+}
+
+header > h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* HEADER =========================== */
+
+/* MAIN =========================== */
+
+main .container {
+  margin-top: 120px;
+  padding: 0 20px;
+}
+
+.block {
+  margin-top: 31px;
+}
+
+.block > h2 {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 26px;
+  color: #333333;
+}
+
+.cards {
+  display: flex;
+  overflow-x: scroll;
+  gap: 16px;
+}
+
+.card {
+  border: 5px solid #fff;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  padding: 18px 14px;
+  margin-block: 18px;
+}
+
+.border {
+  box-sizing: border-box;
+  border: 5px solid #32b72f;
+}
+
+.card h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333333;
+
+  margin-top: 8px;
+}
+
+.card p {
+  font-weight: 300;
+  font-size: 15px;
+  color: #a6a6a6;
+  line-height: 18px;
+  margin-top: 5px;
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 8px;
+}
+
+/* MAIN =========================== */
+
+/* FOOTER =========================== */
+
+footer {
+  width: 414px;
+  height: 92px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 15px;
+}
+
+footer button {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+
+  width: 364px;
+  height: 61px;
+  outline: none;
+  border: none;
+  padding: 0px 80px;
+  border-radius: 50px;
+  background-color: #cbcbcb;
+
+  position: fixed;
+  bottom: 15px;
+  z-index: 0;
+  margin: 0 auto;
+}
+
+button.active {
+  background-color: #32b72f;
+}
+
+/* FOOTER =========================== */
