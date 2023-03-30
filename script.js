@@ -24,8 +24,6 @@ plates.forEach(function (plate) {
   })
 })
 
-console.log(pratoEscolhido)
-
 drinks.forEach(function (drink) {
   drink.addEventListener('click', () => {
     drinks.forEach(function (drink) {
@@ -55,24 +53,25 @@ desserts.forEach(function (dessert) {
 })
 
 function concatenarPedidos() {
+  let new_value_plate = Number(
+    pratoEscolhidoValor.replace('R$ ', '').replace(',', '.')
+  )
+
+  let new_value_drink = Number(
+    bebidaEscolhidaValor.replace('R$ ', '').replace(',', '.')
+  )
+
+  let new_value_dessert = Number(
+    sobremesaEscolhidaValor.replace('R$ ', '').replace(',', '.')
+  )
+
+  let soma = new_value_plate + new_value_drink + new_value_dessert
+
   let texto = `Olá, gostaria de fazer o pedido:
   - Prato: ${pratoEscolhido}
   - Bebida: ${bebidaEscolhida}
   - Sobremesa: ${sobremesaEscolhida}
-
-  - PratoV: ${pratoEscolhidoValor}
-  - BebidaV: ${bebidaEscolhidaValor}
-  - SobremesaV: ${sobremesaEscolhidaValor}
-
-  Total: R$ ${'asasas'}`
+    Total: R$ ${soma.toFixed(2)}`
 
   console.log(texto)
 }
-
-/**
- const precoString = "R$ 27,70";
- const precoFloat = parseFloat(precoString.replace("R$ ", "").replace(",", "."));
- * 
- console.log(precoFloat); // output: 27.7
- * 
- */
