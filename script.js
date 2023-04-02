@@ -46,6 +46,7 @@ drinks.forEach(function (drink) {
   drink.addEventListener('click', () => {
     drinks.forEach(function (drink) {
       drink.classList.remove('border')
+      drink.querySelector('ion-icon').classList.remove('checked') // remove checked de todos os elementos
     })
     drink.classList.add('border')
 
@@ -65,6 +66,7 @@ drinks.forEach(function (drink) {
       if (contaBorda === 3) {
         abilitaBotao()
       }
+      drink.querySelector('ion-icon').classList.add('checked') // adiciona checked ao elemento clicado
     }
   })
 })
@@ -73,6 +75,7 @@ desserts.forEach(function (dessert) {
   dessert.addEventListener('click', () => {
     desserts.forEach(function (dessert) {
       dessert.classList.remove('border')
+      dessert.querySelector('ion-icon').classList.remove('checked') // remove checked de todos os elementos
     })
     dessert.classList.add('border')
 
@@ -93,6 +96,7 @@ desserts.forEach(function (dessert) {
       if (contaBorda === 3) {
         abilitaBotao()
       }
+      dessert.querySelector('ion-icon').classList.add('checked') // adiciona checked ao elemento clicado
     }
   })
 })
