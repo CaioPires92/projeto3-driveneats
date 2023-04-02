@@ -2,6 +2,7 @@ const plates = document.querySelectorAll('.plate')
 const drinks = document.querySelectorAll('.drink')
 const desserts = document.querySelectorAll('.dessert')
 const button = document.querySelector('button')
+const checked = document.querySelector('ion-icon')
 
 let pratoEscolhido
 let bebidaEscolhida
@@ -17,16 +18,26 @@ plates.forEach(function (plate) {
   plate.addEventListener('click', () => {
     plates.forEach(function (plate) {
       plate.classList.remove('border')
+      plate.querySelector('ion-icon').classList.remove('checked') // remove checked de todos os elementos
     })
     plate.classList.add('border')
-
     if (plate.classList.contains('border')) {
       pratoEscolhido = plate.querySelector('h2').textContent
       pratoEscolhidoValor = plate.querySelector('h3').textContent
-      contaBorda++
+      if (!plate.dataset.clicked) {
+        if (contaBorda <= 3) {
+          contaBorda++
+          plate.dataset.clicked = true
+        } else {
+          return
+        }
+      } else {
+        contaBorda = 1
+      }
       if (contaBorda === 3) {
         abilitaBotao()
       }
+      plate.querySelector('ion-icon').classList.add('checked') // adiciona checked ao elemento clicado
     }
   })
 })
@@ -41,7 +52,16 @@ drinks.forEach(function (drink) {
     if (drink.classList.contains('border')) {
       bebidaEscolhida = drink.querySelector('h2').textContent
       bebidaEscolhidaValor = drink.querySelector('h3').textContent
-      contaBorda++
+      if (!drink.dataset.clicked) {
+        if (contaBorda <= 3) {
+          contaBorda++
+          drink.dataset.clicked = true
+        } else {
+          return
+        }
+      } else {
+        contaBorda = 1
+      }
       if (contaBorda === 3) {
         abilitaBotao()
       }
@@ -59,7 +79,17 @@ desserts.forEach(function (dessert) {
     if (dessert.classList.contains('border')) {
       sobremesaEscolhida = dessert.querySelector('h2').textContent
       sobremesaEscolhidaValor = dessert.querySelector('h3').textContent
-      contaBorda++
+
+      if (!dessert.dataset.clicked) {
+        if (contaBorda <= 3) {
+          contaBorda++
+          dessert.dataset.clicked = true
+        } else {
+          return
+        }
+      } else {
+        contaBorda = 1
+      }
       if (contaBorda === 3) {
         abilitaBotao()
       }
@@ -91,15 +121,16 @@ function abilitaBotao() {
 function concatenarPedidos() {
   convertNumbers()
 
-  let texto = `Olá, gostaria de fazer o pedido:
-    - Prato: ${pratoEscolhido}
-    - Bebida: ${bebidaEscolhida}
-    - Sobremesa: ${sobremesaEscolhida}
-      Total: R$ ${soma.toFixed(2)}`
+  let texto = `Olá, gostaria de fazer o pedido: %0a 
+  - Prato: ${pratoEscolhido} %0a
+  - Bebida: ${bebidaEscolhida} %0a
+  - Sobremesa: ${sobremesaEscolhida} %0a
+    Total: R$ ${soma.toFixed(2)}`
 
   console.log(contaBorda)
 
-  // window.open(`https://wa.me/19999999999?text=${texto}`)
+  window.open(`https://wa.me/+5519998701203?text=${texto}`)
 
   console.log(texto)
+  console.log(checked)
 }

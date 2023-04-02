@@ -138,4 +138,16 @@ button.active {
   background-color: #32b72f;
 }
 
+ion-icon {
+  margin-top: 5px;
+  width: 22px;
+  height: 22px;
+  color: #32b72f;
+  display: none;
+}
+
+ion-icon.checked {
+  display: block;
+}
+
 /* FOOTER =========================== */
