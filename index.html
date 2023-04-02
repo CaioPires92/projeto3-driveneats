@@ -17,6 +17,26 @@
   </head>
   <body>
     <div class="container">
+      <!-- <div class="bonus">
+        <div class="container-bonus">
+          <h2>Confirme seu pedido</h2>
+          <div class="pedodo1">
+            <p class="pedido">lorem</p>
+            <p class="preço">R$ 14,00</p>
+          </div>
+          <div class="pedodo2">
+            <p class="pedido">lorem</p>
+            <p class="preço">R$ 14,00</p>
+          </div>
+          <div class="pedodo3">
+            <p class="pedido">lorem</p>
+            <p class="preço">R$ 14,00</p>
+          </div>
+        </div>
+        <button class="finalizar">Tudo certo, pode pedir!</button>
+        <button class="cancelar">Cancelar</button>
+      </div> -->
+
       <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -26,27 +46,27 @@
           <div class="block">
             <h2 class="first">Primeiro, seu prato</h2>
             <div class="cards">
-              <div id="frango-1" class="card plate">
+              <div id="frango-1" class="card plate" data-test="dish">
                 <img src="assets/frango_yin_yang.png" alt="" />
                 <h2>Frango Yin Yang</h2>
                 <p>Um pouco de batata, um pouco de salada</p>
-                <h3>R$ 14,90</h3>
+                <h3 data-test="item-price">R$ 14,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
 
-              <div id="frango-2" class="card plate">
+              <div id="frango-2" class="card plate" data-test="dish">
                 <img src="assets/batata.webp" alt="" />
                 <h2>Batata Frita</h2>
                 <p>Porção de batata frita no capricho</p>
-                <h3>R$ 17,88</h3>
+                <h3 data-test="item-price">R$ 17,88</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
 
-              <div class="card plate">
+              <div class="card plate" data-test="dish">
                 <img src="assets/parmegiana.jpg" alt="" />
                 <h2>Parmegiana</h2>
                 <p>File a parmegiana</p>
-                <h3>R$ 34,80</h3>
+                <h3 data-test="item-price">R$ 34,80</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
             </div>
@@ -55,28 +75,28 @@
           <div class="block">
             <h2>Agora, sua bebida</h2>
             <div class="cards">
-              <div class="card drink">
+              <div class="card drink" data-test="drink">
                 <img src="assets/coca-cola.png" alt="" />
                 <h2>Coquinha gelada</h2>
                 <p>Lata 350ml</p>
-                <h3>R$ 4,90</h3>
+                <h3 data-test="item-price">R$ 4,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
 
-              <div class="card drink">
+              <div class="card drink" data-test="drink">
                 <img src="assets/Jesus.jpg" alt="" />
                 <h2>Guarana Jesus</h2>
                 <p>Lata 350ml</p>
-                <h3>R$ 6,90</h3>
+                <h3 data-test="item-price">R$ 6,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
 
               drink
-              <div class="card drink">
+              <div class="card drink" data-test="drink">
                 <img src="assets/sucodetomate.webp" alt="" />
                 <h2>Suco de tomate</h2>
                 <p>Copo 300ML</p>
-                <h3>R$ 8,90</h3>
+                <h3 data-test="item-price">R$ 8,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
             </div>
@@ -85,27 +105,27 @@
           <div class="block">
             <h2>Por fim, sua sobremesa</h2>
             <div class="cards">
-              <div class="card dessert">
+              <div class="card dessert" data-test="dessert">
                 <img src="assets/pudim.png" alt="" />
                 <h2>Pudim</h2>
                 <p>Apenas pudim</p>
-                <h3>R$ 7,90</h3>
+                <h3 data-test="item-price">R$ 7,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
 
-              <div class="card dessert">
+              <div class="card dessert" data-test="dessert">
                 <img src="assets/pettit.jpg" alt="" />
                 <h2>Petit Gateau</h2>
                 <p>Deliciosa sobremesa</p>
-                <h3>R$ 25,90</h3>
+                <h3 data-test="item-price">R$ 25,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
 
-              <div class="card dessert">
+              <div class="card dessert" data-test="dessert">
                 <img src="assets/pave.webp" alt="" />
                 <h2>Pave</h2>
                 <p>A sobremesa preferida do seu tio.</p>
-                <h3>R$ 22,90</h3>
+                <h3 data-test="item-price">R$ 22,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
               </div>
             </div>
@@ -113,7 +133,7 @@
         </div>
       </main>
       <footer>
-        <button disabled onclick="concatenarPedidos()">
+        <button disabled onclick="concatenarPedidos()" data-test="order-btn">
           Selecione os 3 itens para fechar o pedido
         </button>
       </footer>
