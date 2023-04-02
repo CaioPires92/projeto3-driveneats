@@ -8,6 +8,12 @@ font-family: 'Roboto', sans-serif; */
   background-color: #e5e5e5;
 }
 
+.container img {
+  width: 144px;
+  height: 87px;
+  object-fit: cover;
+}
+
 /* HEADER =========================== */
 
 header {
