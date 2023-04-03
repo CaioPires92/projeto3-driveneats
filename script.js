@@ -1,8 +1,22 @@
 const plates = document.querySelectorAll('.plate')
 const drinks = document.querySelectorAll('.drink')
 const desserts = document.querySelectorAll('.dessert')
-const button = document.querySelector('button')
+const button = document.querySelector('.main-button')
 const checked = document.querySelector('ion-icon')
+const container = document.querySelector('.container')
+const bonus = document.querySelector('.bonus')
+
+let nome
+let endereco
+const pedidoPrato = document.querySelector('.pedido-prato')
+const pedidoBebida = document.querySelector('.pedido-bebida')
+const pedidoSobremesa = document.querySelector('.pedido-sobremesa')
+
+const precoPrato = document.querySelector('.preco-prato')
+const precoBebida = document.querySelector('.preco-bebida')
+const precoSobremesa = document.querySelector('.preco-sobremesa')
+
+const totalBonus = document.querySelector('.total-bonus p')
 
 let pratoEscolhido
 let bebidaEscolhida
@@ -122,19 +136,39 @@ function abilitaBotao() {
   button.textContent = 'Fechar Pedido'
 }
 
-function concatenarPedidos() {
+function finalizarPedido() {
+  nome = prompt('Qual o seu nome? ')
+  endereco = prompt('Qual o seu endereço? ')
   convertNumbers()
 
-  let texto = `Olá, gostaria de fazer o pedido: %0a 
+  pedidoPrato.innerHTML = pratoEscolhido
+  pedidoBebida.innerHTML = bebidaEscolhida
+  pedidoSobremesa.innerHTML = sobremesaEscolhida
+
+  precoPrato.innerHTML = pratoEscolhidoValor
+  precoBebida.innerHTML = bebidaEscolhidaValor
+  precoSobremesa.innerHTML = sobremesaEscolhidaValor
+  totalBonus.innerHTML = soma.toFixed(2)
+
+  bonus.classList.add('active-bonus')
+  container.classList.add('transparencia')
+}
+
+function tudoCerto() {
+  let texto = `Olá, gostaria de fazer o pedido: %0a
   - Prato: ${pratoEscolhido} %0a
   - Bebida: ${bebidaEscolhida} %0a
   - Sobremesa: ${sobremesaEscolhida} %0a
-    Total: R$ ${soma.toFixed(2)}`
-
-  console.log(contaBorda)
+  Total: R$ ${soma.toFixed(2)} %0a 
+    %0a 
+  Nome: ${nome} %0a 
+  Endereço: ${endereco}
+    `
 
   window.open(`https://wa.me/+5519998701203?text=${texto}`)
+}
 
-  console.log(texto)
-  console.log(checked)
+function cancelar() {
+  bonus.classList.remove('active-bonus')
+  container.classList.remove('transparencia')
 }

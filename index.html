@@ -16,27 +16,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- <div class="bonus">
-        <div class="container-bonus">
-          <h2>Confirme seu pedido</h2>
-          <div class="pedodo1">
-            <p class="pedido">lorem</p>
-            <p class="preço">R$ 14,00</p>
-          </div>
-          <div class="pedodo2">
-            <p class="pedido">lorem</p>
-            <p class="preço">R$ 14,00</p>
-          </div>
-          <div class="pedodo3">
-            <p class="pedido">lorem</p>
-            <p class="preço">R$ 14,00</p>
-          </div>
+    <div class="bonus ">
+      <div class="container-bonus" data-test="confirm-order-modal">
+        <h2>Confirme seu pedido</h2>
+        <div class="block-pedido">
+          <p class="pedido-prato">lorem</p>
+          <p class="preco-prato">R$ 14,00</p>
         </div>
-        <button class="finalizar">Tudo certo, pode pedir!</button>
-        <button class="cancelar">Cancelar</button>
-      </div> -->
+        <div class="block-pedido">
+          <p class="pedido-bebida">lorem</p>
+          <p class="preco-bebida">R$ 14,00</p>
+        </div>
+        <div class="block-pedido">
+          <p class="pedido-sobremesa">lorem</p>
+          <p class="preco-sobremesa">R$ 14,00</p>
+        </div>
+        <div class="total-bonus">
+          <h3>total</h2>
+          <p>R$ 00,00</p>
+        </div>
+        <button class="finalizar" onclick="tudoCerto()" data-test="confirm-order-btn">Tudo certo, pode pedir!</button>
+        <button class="cancelar" onclick="cancelar()" data-test="cancel-order-btn">Cancelar</button>
+      </div>
+    </div>
 
+    <div class="container">
       <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -85,7 +89,7 @@
 
               <div class="card drink" data-test="drink">
                 <img src="assets/Jesus.jpg" alt="" />
-                <h2 data-test="item-name">Guarana Jesus</h2>
+                <h2 data-test="item-name">Guaraná Jesus</h2>
                 <p>Lata 350ml</p>
                 <h3 data-test="item-price">R$ 6,90</h3>
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
@@ -133,7 +137,7 @@
         </div>
       </main>
       <footer>
-        <button disabled onclick="concatenarPedidos()" data-test="order-btn">
+        <button class="main-button" disabled onclick="finalizarPedido()" data-test="order-btn">
           Selecione os 3 itens para fechar o pedido
         </button>
       </footer>
