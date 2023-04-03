@@ -148,7 +148,7 @@ function finalizarPedido() {
   precoPrato.innerHTML = pratoEscolhidoValor
   precoBebida.innerHTML = bebidaEscolhidaValor
   precoSobremesa.innerHTML = sobremesaEscolhidaValor
-  totalBonus.innerHTML = soma.toFixed(2)
+  totalBonus.innerHTML = `R$ ${soma.toFixed(2)}`
 
   bonus.classList.add('active-bonus')
   container.classList.add('transparencia')

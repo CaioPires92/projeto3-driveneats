@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bonus ">
+    <div class="bonus">
       <div class="container-bonus" data-test="confirm-order-modal">
         <h2>Confirme seu pedido</h2>
         <div class="block-pedido">
@@ -32,11 +32,23 @@
           <p class="preco-sobremesa">R$ 14,00</p>
         </div>
         <div class="total-bonus">
-          <h3>total</h2>
+          <h3>total</h3>
           <p>R$ 00,00</p>
         </div>
-        <button class="finalizar" onclick="tudoCerto()" data-test="confirm-order-btn">Tudo certo, pode pedir!</button>
-        <button class="cancelar" onclick="cancelar()" data-test="cancel-order-btn">Cancelar</button>
+        <button
+          class="finalizar"
+          onclick="tudoCerto()"
+          data-test="confirm-order-btn"
+        >
+          Tudo certo, pode pedir!
+        </button>
+        <button
+          class="cancelar"
+          onclick="cancelar()"
+          data-test="cancel-order-btn"
+        >
+          Cancelar
+        </button>
       </div>
     </div>
 
@@ -136,7 +148,12 @@
         </div>
       </main>
       <footer>
-        <button class="main-button" disabled onclick="finalizarPedido()" data-test="order-btn">
+        <button
+          class="main-button"
+          disabled
+          onclick="finalizarPedido()"
+          data-test="order-btn"
+        >
           Selecione os 3 itens para fechar o pedido
         </button>
       </footer>
